@@ -1,0 +1,14 @@
+flag = 0
+while flag == 0:
+    inp_kk_v = input()
+    k_key, value = inp_kk_v.split(' ')
+    new_value = ''
+    if k_key == '0' and value == '0':
+        break
+    for s in value:
+        if s != k_key:
+            new_value += s
+    if new_value == '':
+        new_value = '0'
+    new_value = int(new_value)
+    print(new_value, end = '\n')
