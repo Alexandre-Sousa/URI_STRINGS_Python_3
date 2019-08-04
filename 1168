@@ -1,0 +1,28 @@
+numc = int(input())
+cont = 0
+while cont < numc:
+    num = input()
+    numleds = 0
+    for s in num:
+            if s == '0':
+                numleds += 6
+            elif s == '1':
+                numleds += 2
+            elif s == '2':
+                numleds += 5
+            elif s == '3':
+                numleds += 5
+            elif s == '4':
+                numleds += 4
+            elif s == '5':
+                numleds += 5
+            elif s == '6':
+                numleds += 6
+            elif s == '7':
+                numleds += 3
+            elif s == '8':
+                numleds += 7
+            elif s == '9':
+                numleds += 6
+    print('{} leds'.format(numleds), end = '\n')
+    cont += 1
