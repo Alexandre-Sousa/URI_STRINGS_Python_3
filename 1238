@@ -1,0 +1,45 @@
+N = int(input())
+
+for i in range(0, N, 1):
+
+    line = input()
+    first_word, second_word = line.split(' ')
+    first_list = []
+    second_list = []
+    new_list = []
+    delimiter = ''
+    m = 0
+    n = 0
+    flag = 0
+
+    if len(first_word) > len(second_word):
+        limit = len(second_word)
+        flag = 1
+    else:
+        limit = len(first_word)
+        flag = 2
+
+    for a in first_word:
+        first_list.append(a)
+    for b in second_word:
+        second_list.append(b)
+
+    for a in range(0, limit, 1):
+        new_list.append(first_list[m])
+        new_list.append(second_list[n])
+        m += 1
+        n += 1
+
+    if flag == 1:
+        while m != len(first_list):
+            new_list.append(first_list[m])
+            m += 1
+
+    elif flag == 2:
+        while n != len(second_list):
+            new_list.append(second_list[n])
+            n += 1
+
+    new_word = delimiter.join(new_list)
+
+    print(new_word, end = '\n')
