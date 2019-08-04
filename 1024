@@ -1,0 +1,21 @@
+numc = int(input())
+cont = 0
+while cont < numc:
+    word = input()
+    new_word = ''
+    for s in word:
+        if s.isalpha():
+            new_word += chr(ord(s) + 3)
+        else:
+            new_word += s
+
+    inverted_nw = new_word[::-1]
+
+    second_half = ''
+    index_trunc = len(word) // 2
+    first_half = inverted_nw[:index_trunc]
+    for s in inverted_nw[index_trunc:]:
+        new_letter = chr(ord(s) - 1)
+        second_half += new_letter
+    cripto_word = first_half + second_half
+    print(cripto_word, end = '\n')
