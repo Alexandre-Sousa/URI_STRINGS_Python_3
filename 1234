@@ -1,0 +1,18 @@
+while True:
+    try:
+        sentence = input()
+        new_sentence = ''
+        signal = 1
+        for letter in sentence:
+            if letter == ' ':
+                new_sentence += letter
+            else:
+                if signal % 2 != 0:
+                    new_sentence += letter.upper()
+                    signal += 1
+                else:
+                    new_sentence += letter.lower()
+                    signal += 1
+        print(new_sentence, end = '\n')
+    except EOFError:
+        break
