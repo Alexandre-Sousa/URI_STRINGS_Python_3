@@ -1,0 +1,9 @@
+num_cases = int(input())
+for cases in range(0, num_cases, 1):
+    line = input()
+    first_half = line[0:len(line) // 2]
+    second_half = line[len(line) // 2:len(line)]
+    n_f_half = first_half[::-1]
+    n_s_half = second_half[::-1]
+    correct_line = n_f_half + n_s_half
+    print(correct_line, end = "\n")
